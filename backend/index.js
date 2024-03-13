@@ -37,4 +37,5 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING) //make sure that you have 
     app.listen(PORT, function(){
         console.log("listening on " + PORT);
     })
-}).catch(err => {console.log(err.message);});
+}).catch(err => {console.log(err.message)
+    console.log("wrong");});
