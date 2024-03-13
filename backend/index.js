@@ -16,17 +16,17 @@ app.use(express.json());//parses JSONs
 app.use(express.urlencoded({extended:false}));//this is common practice for urlencoded
 
 const PORT=process.env.PORT||8080;
-const MONGO_CONNECTION = process.env.MONGO_CONNECTION;
+
 //routes
 app.use("/api/v1/seed",seedRouter);
 app.use("/api/v1/products",productRouter);
 app.use("/api/v1/users",userRouter);
 app.use("/api/v1/orders",orderRouter);
-app.use((error,req,res,next)=>{
-    res.status(500).send({message:"jjjjjj"});
+app.use((err,req,res,next)=>{
+    res.status(500).send({message:err.message});
 });
 
-mongoose.connect(MONGO_CONNECTION)
+mongoose.connect(process.env.MONGO_CONNECTION)
 .then(()=>{
     app.listen(PORT,function(){
         console.log("listening to port 8080")
