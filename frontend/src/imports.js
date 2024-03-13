@@ -17,13 +17,10 @@ import FormControl from "react-bootstrap/FormControl"
 import Button  from "react-bootstrap/Button"
 import React from 'react'
 import {Helmet} from 'react-helmet-async';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 import Button  from "react-bootstrap/Button"
 import React from 'react'
-import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
-import Rating from '../Shared/Rating'
 import { toast } from 'react-toastify';
 
 import React, { useEffect, useReducer } from 'react'

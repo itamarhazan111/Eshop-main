@@ -7,7 +7,7 @@ import PaymentSummary from '../components/Shared/PaymentSummary'
 import { useParams } from 'react-router-dom'
 import { Store } from '../Store'
 import axios from 'axios'
-import data from '../../../backend/data'
+
 
 function SummaryPage() {
     const {id}=useParams();
