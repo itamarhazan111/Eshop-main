@@ -26,9 +26,15 @@ app.use((err,req,res,next)=>{
     res.status(500).send({message:err.message});
 });
 
-mongoose.connect(process.env.MONGO_CONNECTION)
-.then(()=>{
-    app.listen(PORT,function(){
-        console.log("listening to port 8080")
+// mongoose.connect(process.env.MONGO_CONNECTION)
+// .then(()=>{
+//     app.listen(PORT,function(){
+//         console.log("listening to port 8080")
+//     })
+// }).catch(err=>console.log(err.message));
+mongoose.connect(process.env.MONGO_CONNECTION) //make sure that you have a .env file
+.then(() => {
+    app.listen(PORT, function(){
+        console.log("listening on " + PORT);
     })
-}).catch(err=>console.log(err.message));
+}).catch(err => {console.log(err.message);});
