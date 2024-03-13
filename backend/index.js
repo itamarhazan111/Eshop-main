@@ -23,7 +23,7 @@ app.use("/api/v1/products",productRouter);
 app.use("/api/v1/users",userRouter);
 app.use("/api/v1/orders",orderRouter);
 app.use((error,req,res,next)=>{
-    res.status(500).send({message:error.message});
+    res.status(500).send({message:"jjjjjj"});
 });
 
 mongoose.connect(MONGO_CONNECTION)
