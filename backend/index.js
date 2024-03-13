@@ -18,10 +18,10 @@ app.use(express.urlencoded({extended:false}));//this is common practice for urle
 const PORT=process.env.PORT||8080;
 
 //routes
-app.use("api/v1/seed",seedRouter);
-app.use("api/v1/products",productRouter);
-app.use("api/v1/users",userRouter);
-app.use("api/v1/orders",orderRouter);
+app.use("/api/v1/seed",seedRouter);
+app.use("/api/v1/products",productRouter);
+app.use("/api/v1/users",userRouter);
+app.use("/api/v1/orders",orderRouter);
 app.use((err,req,res,next)=>{
     res.status(500).send({message:err.message});
 });
