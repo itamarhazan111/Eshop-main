@@ -7,7 +7,7 @@ import {HelmetProvider} from 'react-helmet-async';
 import axios from "axios";
 import { StoreProvider } from "./Store.jsx";
 
-axios.defaults.baseURL="http://localhost:8080";
+axios.defaults.baseURL="https://eshop-main-five.vercel.app/";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
